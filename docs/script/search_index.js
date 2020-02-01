@@ -103,8 +103,8 @@ window.esdocSearchIndex = [
   ],
   [
     "@ericblade/mws-advanced/lib/helpers/getproductcategories.js~getproductcategoriesforskus",
-    "function/index.html#static-function-getProductCategoriesForSkus",
-    "<span>getProductCategoriesForSkus</span> <span class=\"search-result-import-path\">@ericblade/mws-advanced/lib/helpers/getProductCategories.js</span>",
+    "function/index.html#static-function-getProductCategoriesForSKUs",
+    "<span>getProductCategoriesForSKUs</span> <span class=\"search-result-import-path\">@ericblade/mws-advanced/lib/helpers/getProductCategories.js</span>",
     "function"
   ],
   [
@@ -913,14 +913,14 @@ window.esdocSearchIndex = [
   ],
   [
     "lib/index.js~mwsadvanced#getlowestpricedoffersforasin",
-    "class/lib/index.js~MwsAdvanced.html#instance-method-getLowestPricedOffersForAsin",
-    "lib/index.js~MwsAdvanced#getLowestPricedOffersForAsin",
+    "class/lib/index.js~MwsAdvanced.html#instance-method-getLowestPricedOffersForASIN",
+    "lib/index.js~MwsAdvanced#getLowestPricedOffersForASIN",
     "method"
   ],
   [
     "lib/index.js~mwsadvanced#getlowestpricedoffersforsku",
-    "class/lib/index.js~MwsAdvanced.html#instance-method-getLowestPricedOffersForSku",
-    "lib/index.js~MwsAdvanced#getLowestPricedOffersForSku",
+    "class/lib/index.js~MwsAdvanced.html#instance-method-getLowestPricedOffersForSKU",
+    "lib/index.js~MwsAdvanced#getLowestPricedOffersForSKU",
     "method"
   ],
   [
@@ -949,14 +949,14 @@ window.esdocSearchIndex = [
   ],
   [
     "lib/index.js~mwsadvanced#getproductcategoriesforasins",
-    "class/lib/index.js~MwsAdvanced.html#instance-method-getProductCategoriesForAsins",
-    "lib/index.js~MwsAdvanced#getProductCategoriesForAsins",
+    "class/lib/index.js~MwsAdvanced.html#instance-method-getProductCategoriesForASINs",
+    "lib/index.js~MwsAdvanced#getProductCategoriesForASINs",
     "method"
   ],
   [
     "lib/index.js~mwsadvanced#getproductcategoriesforskus",
-    "class/lib/index.js~MwsAdvanced.html#instance-method-getProductCategoriesForSkus",
-    "lib/index.js~MwsAdvanced#getProductCategoriesForSkus",
+    "class/lib/index.js~MwsAdvanced.html#instance-method-getProductCategoriesForSKUs",
+    "lib/index.js~MwsAdvanced#getProductCategoriesForSKUs",
     "method"
   ],
   [
@@ -1075,14 +1075,14 @@ window.esdocSearchIndex = [
   ],
   [
     "lib/index.js~mwsadvanced.getlowestpricedoffersforasin",
-    "class/lib/index.js~MwsAdvanced.html#static-method-getLowestPricedOffersForAsin",
-    "lib/index.js~MwsAdvanced.getLowestPricedOffersForAsin",
+    "class/lib/index.js~MwsAdvanced.html#static-method-getLowestPricedOffersForASIN",
+    "lib/index.js~MwsAdvanced.getLowestPricedOffersForASIN",
     "method"
   ],
   [
     "lib/index.js~mwsadvanced.getlowestpricedoffersforsku",
-    "class/lib/index.js~MwsAdvanced.html#static-method-getLowestPricedOffersForSku",
-    "lib/index.js~MwsAdvanced.getLowestPricedOffersForSku",
+    "class/lib/index.js~MwsAdvanced.html#static-method-getLowestPricedOffersForSKU",
+    "lib/index.js~MwsAdvanced.getLowestPricedOffersForSKU",
     "method"
   ],
   [
@@ -1111,14 +1111,14 @@ window.esdocSearchIndex = [
   ],
   [
     "lib/index.js~mwsadvanced.getproductcategoriesforasins",
-    "class/lib/index.js~MwsAdvanced.html#static-method-getProductCategoriesForAsins",
-    "lib/index.js~MwsAdvanced.getProductCategoriesForAsins",
+    "class/lib/index.js~MwsAdvanced.html#static-method-getProductCategoriesForASINs",
+    "lib/index.js~MwsAdvanced.getProductCategoriesForASINs",
     "method"
   ],
   [
     "lib/index.js~mwsadvanced.getproductcategoriesforskus",
-    "class/lib/index.js~MwsAdvanced.html#static-method-getProductCategoriesForSkus",
-    "lib/index.js~MwsAdvanced.getProductCategoriesForSkus",
+    "class/lib/index.js~MwsAdvanced.html#static-method-getProductCategoriesForSKUs",
+    "lib/index.js~MwsAdvanced.getProductCategoriesForSKUs",
     "method"
   ],
   [

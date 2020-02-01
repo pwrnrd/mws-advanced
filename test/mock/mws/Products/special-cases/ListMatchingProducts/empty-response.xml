@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ListMatchingProductsResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
+	<ListMatchingProductsResult>
+		<Products xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd"/>
+	</ListMatchingProductsResult>
+	<ResponseMetadata>
+		<RequestId>7b4be169-cjai-4de2-af6b-c54bbd0ed47d</RequestId>
+	</ResponseMetadata>
+</ListMatchingProductsResponse>

@@ -10,7 +10,7 @@ mws.init(keys);
 /* eslint-disable no-sequences */
 const getCats = asins => (
     console.warn('* getting categories for asin count', asins.length),
-    mws.getProductCategoriesForAsins({
+    mws.getProductCategoriesForASINs({
         marketplaceId: 'ATVPDKIKX0DER',
         asins,
     })

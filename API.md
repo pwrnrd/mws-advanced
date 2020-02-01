@@ -14,10 +14,10 @@
 -   [listInventorySupply][10]
 -   [listMatchingProducts][11]
 -   [getMatchingProductForId][12]
--   [getLowestPricedOffersForAsin][13]
--   [getLowestPricedOffersForSku][14]
--   [getProductCategoriesForAsins][15]
--   [getProductCategoriesForSkus][16]
+-   [getLowestPricedOffersForASIN][13]
+-   [getLowestPricedOffersForSKU][14]
+-   [getProductCategoriesForASINs][15]
+-   [getProductCategoriesForSKUs][16]
 -   [getMyFeesEstimate][17]
 -   [requestReport][18]
 -   [getReportRequestList][19]
@@ -68,9 +68,9 @@
 -   [reformatBuyBoxPrice][64]
 -   [reformatSummary][65]
 -   [parseLowestPricedOffers][66]
--   [getProductCategoriesForAsins][67]
--   [getProductCategoriesForAsins][68]
--   [getProductCategoriesForAsins][69]
+-   [getProductCategoriesForASINs][67]
+-   [getProductCategoriesForASINs][68]
+-   [getProductCategoriesForASINs][69]
 -   [estimateRequestParser][70]
 -   [estimateRequestParser][71]
 -   [estimateRequestParser][72]
@@ -95,10 +95,10 @@
 -   [listInventorySupply](#listinventorysupply)
 -   [listMatchingProducts](#listmatchingproducts)
 -   [getMatchingProductForId](#getmatchingproductforid)
--   [getLowestPricedOffersForAsin](#getlowestpricedoffersforasin)
--   [getLowestPricedOffersForSku](#getlowestpricedoffersforsku)
--   [getProductCategoriesForAsins](#getproductcategoriesforasins)
--   [getProductCategoriesForSkus](#getproductcategoriesforskus)
+-   [getLowestPricedOffersForASIN](#getlowestpricedoffersforasin)
+-   [getLowestPricedOffersForSKU](#getlowestpricedoffersforsku)
+-   [getProductCategoriesForASINs](#getproductcategoriesforasins)
+-   [getProductCategoriesForSKUs](#getproductcategoriesforskus)
 -   [getMyFeesEstimate](#getmyfeesestimate)
 -   [requestReport](#requestreport)
 -   [getReportRequestList](#getreportrequestlist)
@@ -173,9 +173,9 @@
 -   [reformatBuyBoxPrice](#reformatbuyboxprice)
 -   [reformatSummary](#reformatsummary)
 -   [parseLowestPricedOffers](#parselowestpricedoffers)
--   [getProductCategoriesForAsins](#getproductcategoriesforasins-1)
--   [getProductCategoriesForAsins](#getproductcategoriesforasins-2)
--   [getProductCategoriesForAsins](#getproductcategoriesforasins-3)
+-   [getProductCategoriesForASINs](#getproductcategoriesforasins-1)
+-   [getProductCategoriesForASINs](#getproductcategoriesforasins-2)
+-   [getProductCategoriesForASINs](#getproductcategoriesforasins-3)
 -   [estimateRequestParser](#estimaterequestparser)
 -   [estimateRequestParser](#estimaterequestparser-1)
 -   [estimateRequestParser](#estimaterequestparser-2)
@@ -403,7 +403,7 @@ EAN, ISBN, or JAN values
 
 Returns **[Array][87]&lt;Product>**
 
-## getLowestPricedOffersForAsin
+## getLowestPricedOffersForASIN
 
 getLowestPricedOffersForASIN
 
@@ -419,7 +419,7 @@ Calls GetLowestPricedOffersForASIN, reformats results, and returns the data
 
 Returns **LowestPricedOffers**
 
-## getLowestPricedOffersForSku
+## getLowestPricedOffersForSKU
 
 getLowestPricedOffersForSKU
 
@@ -435,7 +435,7 @@ Calls GetLowestPricedOffersForSKU, reformats results, and returns the data
 
 Returns **LowestPricedOffers**
 
-## getProductCategoriesForAsins
+## getProductCategoriesForASINs
 
 return product categories for multiple asins
 
@@ -448,7 +448,7 @@ return product categories for multiple asins
 
 Returns **[Array][87]&lt;productCategoryByAsin>** Array of product category information
 
-## getProductCategoriesForSkus
+## getProductCategoriesForSKUs
 
 return product categories for multiple SKUs
 
@@ -1146,7 +1146,7 @@ Returns **[Array][87]&lt;Product>**
 -   `summary` **OfferSummary** \-
 -   `offers` **[Array][87]&lt;Offers>** list of offers
 
-## getProductCategoriesForAsins
+## getProductCategoriesForASINs
 
 **Parameters**
 
@@ -1158,7 +1158,7 @@ Returns **[Array][87]&lt;Product>**
 -   `ProductCategoryName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The string human readable description of the category
 -   `Parent` **productCategory?** Parent product category. This will not be present if this category is the root.
 
-## getProductCategoriesForAsins
+## getProductCategoriesForASINs
 
 **Parameters**
 
@@ -1167,7 +1167,7 @@ Returns **[Array][87]&lt;Product>**
 -   `error` **[object][81]?** This field is set when a server error is returned, see error.code and error.body for further info. Server Errors may be returned for invalid ASINs or other reasons.
 -   `Self` **productCategory?** The product category this ASIN belongs to - if not present, may be an invalid ASIN
 
-## getProductCategoriesForAsins
+## getProductCategoriesForASINs
 
 **Parameters**
 

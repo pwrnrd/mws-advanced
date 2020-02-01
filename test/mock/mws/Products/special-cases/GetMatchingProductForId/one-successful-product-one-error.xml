@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<GetMatchingProductForIdResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
+	<GetMatchingProductForIdResult Id="B005NK7VTU" IdType="ASIN" status="Success">
+		<Products xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+			<Product>
+				<Identifiers>
+					<MarketplaceASIN>
+						<MarketplaceId>ATVPDKIKX0DER</MarketplaceId>
+						<ASIN>B005NK7VTU</ASIN>
+					</MarketplaceASIN>
+				</Identifiers>
+				<AttributeSets>
+					<ns2:ItemAttributes xml:lang="en-US">
+						<ns2:Binding>Apparel</ns2:Binding>
+						<ns2:Brand>2XU</ns2:Brand>
+						<ns2:Color>Black/Grey</ns2:Color>
+						<ns2:Department>womens</ns2:Department>
+						<ns2:ItemDimensions>
+							<ns2:Weight Units="pounds">0.24</ns2:Weight>
+						</ns2:ItemDimensions>
+						<ns2:IsAutographed>false</ns2:IsAutographed>
+						<ns2:IsMemorabilia>false</ns2:IsMemorabilia>
+						<ns2:Label>2XU Pty Ltd</ns2:Label>
+						<ns2:ListPrice>
+							<ns2:Amount>59.95</ns2:Amount>
+							<ns2:CurrencyCode>USD</ns2:CurrencyCode>
+						</ns2:ListPrice>
+						<ns2:Manufacturer>2XU Pty Ltd</ns2:Manufacturer>
+						<ns2:MaterialType>nylon</ns2:MaterialType>
+						<ns2:Model>WA1994e</ns2:Model>
+						<ns2:NumberOfItems>1</ns2:NumberOfItems>
+						<ns2:PackageDimensions>
+							<ns2:Height Units="inches">1.199999998776</ns2:Height>
+							<ns2:Length Units="inches">10.799999988984000787401574</ns2:Length>
+							<ns2:Width Units="inches">5.399999994492000393700787</ns2:Width>
+							<ns2:Weight Units="pounds">0.25</ns2:Weight>
+						</ns2:PackageDimensions>
+						<ns2:PackageQuantity>1</ns2:PackageQuantity>
+						<ns2:PartNumber>WA1994e</ns2:PartNumber>
+						<ns2:ProductGroup>Apparel</ns2:ProductGroup>
+						<ns2:ProductTypeName>SPORTING_GOODS</ns2:ProductTypeName>
+						<ns2:Publisher>2XU Pty Ltd</ns2:Publisher>
+						<ns2:Size>Small</ns2:Size>
+						<ns2:SmallImage>
+							<ns2:URL>http://ecx.images-amazon.com/images/I/31e33B0JjNL._SL75_.jpg</ns2:URL>
+							<ns2:Height Units="pixels">75</ns2:Height>
+							<ns2:Width Units="pixels">75</ns2:Width>
+						</ns2:SmallImage>
+						<ns2:Studio>2XU Pty Ltd</ns2:Studio>
+						<ns2:Title>2XU Women's Elite Compression Socks, Black/Grey, Small</ns2:Title>
+					</ns2:ItemAttributes>
+				</AttributeSets>
+				<Relationships>
+					<VariationParent>
+						<Identifiers>
+							<MarketplaceASIN>
+								<MarketplaceId>ATVPDKIKX0DER</MarketplaceId>
+								<ASIN>B00591XGAG</ASIN>
+							</MarketplaceASIN>
+						</Identifiers>
+					</VariationParent>
+				</Relationships>
+				<SalesRankings>
+					<SalesRank>
+						<ProductCategoryId>fashion_display_on_website</ProductCategoryId>
+						<Rank>1320690</Rank>
+					</SalesRank>
+					<SalesRank>
+						<ProductCategoryId>5006378011</ProductCategoryId>
+						<Rank>4657</Rank>
+					</SalesRank>
+				</SalesRankings>
+			</Product>
+		</Products>
+	</GetMatchingProductForIdResult>
+	<GetMatchingProductForIdResult Id="B01FZRFN2C" IdType="ASIN" status="ClientError">
+		<Error>
+			<Type>Sender</Type>
+			<Code>InvalidParameterValue</Code>
+			<Message>Invalid ASIN identifier B01FZRFN2C for marketplace ATVPDKIKX0DER</Message>
+		</Error>
+	</GetMatchingProductForIdResult>
+	<ResponseMetadata>
+		<RequestId>041b4baf-cc4b-4af4-8ecd-8aeb955594b3</RequestId>
+	</ResponseMetadata>
+</GetMatchingProductForIdResponse>

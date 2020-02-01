@@ -57,6 +57,7 @@
     "nyc": "^15.0.0",
     "pre-commit": "^1.2.2",
     "semantic-release": "^16.0.0",
+    "sinon": "^8.1.1",
     "typescript": "^3.7.4",
     "xml2js": "^0.4.22"
   },

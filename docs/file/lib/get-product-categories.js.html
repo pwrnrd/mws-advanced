@@ -36,8 +36,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/errors.js~ValidationError.html">ValidationError</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-callEndpoint">callEndpoint</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-init">init</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getProductCategoriesForAsins">getProductCategoriesForAsins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getProductCategoriesForSkus">getProductCategoriesForSkus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getProductCategoriesForASINs">getProductCategoriesForASINs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getProductCategoriesForSKUs">getProductCategoriesForSKUs</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parseEndpoint">parseEndpoint</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReportListAll">getReportListAll</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-requestAndDownloadReport">requestAndDownloadReport</a></span></span></li>
@@ -109,7 +109,7 @@
  * @param {string} parameters.asin - asin to query for
  * @returns Promise that will resolve to { asin: &apos;ORIGINAL_ASIN&apos;, ...productCategories }
  */
-const getProductCategoriesForAsin = ({ marketplaceId, asin }) =&gt; callEndpoint(
+const getProductCategoriesForASIN = ({ marketplaceId, asin }) =&gt; callEndpoint(
     &apos;GetProductCategoriesForASIN&apos;,
     {
         MarketplaceId: marketplaceId,
@@ -118,7 +118,7 @@ const getProductCategoriesForAsin = ({ marketplaceId, asin }) =&gt; callEndpoint
 ).then(res =&gt; ({ asin, ...res })).catch(error =&gt; Promise.resolve({ asin, error }));
 
 /**
- * same as getProductCategoriesForAsin but by Sku
+ * same as getProductCategoriesForASIN but by Sku
  *
  * @private
  * @param {object} parameters
@@ -126,7 +126,7 @@ const getProductCategoriesForAsin = ({ marketplaceId, asin }) =&gt; callEndpoint
  * @param {string} parameters.sellerSku - sku to query for
  * @returns Promise that will resolve to { sku: &apos;ORIGINAL_SKU&apos;, ...productCategories }
  */
-const getProductCategoriesForSku = ({ marketplaceId, sellerSku }) =&gt; callEndpoint(
+const getProductCategoriesForSKU = ({ marketplaceId, sellerSku }) =&gt; callEndpoint(
     &apos;GetProductCategoriesForSKU&apos;,
     {
         MarketplaceId: marketplaceId,
@@ -167,8 +167,8 @@ const getProductCategoriesForSku = ({ marketplaceId, sellerSku }) =&gt; callEndp
  * @param {string[]} parameters.asins - Array of string ASINs to query for
  * @returns {productCategoryByAsin[]} - Array of product category information
  */
-const getProductCategoriesForAsins = ({ marketplaceId, asins }) =&gt; {
-    const results = asins.map(asin =&gt; getProductCategoriesForAsin({ marketplaceId, asin }));
+const getProductCategoriesForASINs = ({ marketplaceId, asins }) =&gt; {
+    const results = asins.map(asin =&gt; getProductCategoriesForASIN({ marketplaceId, asin }));
     return Promise.all(results);
 };
 
@@ -180,14 +180,14 @@ const getProductCategoriesForAsins = ({ marketplaceId, asins }) =&gt; {
  * @param {string[]} parameters.skus - Array of string SKUs to query for
  * @returns {productCategoryBySku[]} - Array of product category information
  */
-const getProductCategoriesForSkus = ({ marketplaceId, skus }) =&gt; {
-    const results = skus.map(sku =&gt; getProductCategoriesForSku({ marketplaceId, sku }));
+const getProductCategoriesForSKUs = ({ marketplaceId, skus }) =&gt; {
+    const results = skus.map(sku =&gt; getProductCategoriesForSKU({ marketplaceId, sku }));
     return Promise.all(results);
 };
 
 module.exports = {
-    getProductCategoriesForAsins,
-    getProductCategoriesForSkus,
+    getProductCategoriesForASINs,
+    getProductCategoriesForSKUs,
 };
 </code></pre>
 

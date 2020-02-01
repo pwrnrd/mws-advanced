@@ -323,11 +323,11 @@ declare module "helpers/getProductCategories" {
     export type productCategory = any;
     export type productCategoryByAsin = any;
     export type productCategoryBySku = any;
-    export function getProductCategoriesForAsins(api: any): ({ marketplaceId, asins }: {
+    export function getProductCategoriesForASINs(api: any): ({ marketplaceId, asins }: {
         marketplaceId: any;
         asins: any;
     }) => Promise<[any, any, any, any, any, any, any, any, any, any]>;
-    export function getProductCategoriesForSkus(api: any): ({ marketplaceId, skus }: {
+    export function getProductCategoriesForSKUs(api: any): ({ marketplaceId, skus }: {
         marketplaceId: any;
         skus: any;
     }) => Promise<[any, any, any, any, any, any, any, any, any, any]>;
@@ -400,11 +400,11 @@ declare module "index" {
         };
         listMatchingProducts(...params: any[]): any[];
         getMatchingProductForId(...params: any[]): any[];
-        getLowestPricedOffersForAsin(...params: any[]): any;
-        getLowestPricedOffersForSku(...params: any[]): any;
+        getLowestPricedOffersForASIN(...params: any[]): any;
+        getLowestPricedOffersForSKU(...params: any[]): any;
         getMyFeesEstimate(...params: any[]): Object;
-        getProductCategoriesForAsins(...params: any[]): any[];
-        getProductCategoriesForSkus(...params: any[]): any[];
+        getProductCategoriesForASINs(...params: any[]): any[];
+        getProductCategoriesForSKUs(...params: any[]): any[];
         getReport(options: {
             ReportId: string;
         }): any;

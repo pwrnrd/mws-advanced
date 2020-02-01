@@ -50,7 +50,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getMatchingProductForId">getMatchingProductForId</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getMyFeesEstimate">getMyFeesEstimate</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getOrder">getOrder</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getProductCategoriesForSkus">getProductCategoriesForSkus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getProductCategoriesForSKUs">getProductCategoriesForSKUs</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-listFinancialEvents">listFinancialEvents</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-listInventorySupply">listInventorySupply</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-listMatchingProducts">listMatchingProducts</a></span></span></li>
@@ -121,7 +121,7 @@
  * @param {string} parameters.asin - asin to query for
  * @returns Promise that will resolve to { asin: &apos;ORIGINAL_ASIN&apos;, ...productCategories }
  */
-const getProductCategoriesForAsin = api =&gt; ({ marketplaceId, asin }) =&gt; api.callEndpoint(
+const getProductCategoriesForASIN = api =&gt; ({ marketplaceId, asin }) =&gt; api.callEndpoint(
     &apos;GetProductCategoriesForASIN&apos;,
     {
         MarketplaceId: marketplaceId,
@@ -130,7 +130,7 @@ const getProductCategoriesForAsin = api =&gt; ({ marketplaceId, asin }) =&gt; ap
 ).then(res =&gt; ({ asin, ...res })).catch(error =&gt; Promise.resolve({ asin, error }));
 
 /**
- * same as getProductCategoriesForAsin but by Sku
+ * same as getProductCategoriesForASIN but by Sku
  *
  * @private
  * @param {object} parameters
@@ -138,7 +138,7 @@ const getProductCategoriesForAsin = api =&gt; ({ marketplaceId, asin }) =&gt; ap
  * @param {string} parameters.sellerSku - sku to query for
  * @returns Promise that will resolve to { sku: &apos;ORIGINAL_SKU&apos;, ...productCategories }
  */
-const getProductCategoriesForSku = api =&gt; ({ marketplaceId, sellerSku }) =&gt; api.callEndpoint(
+const getProductCategoriesForSKU = api =&gt; ({ marketplaceId, sellerSku }) =&gt; api.callEndpoint(
     &apos;GetProductCategoriesForSKU&apos;,
     {
         MarketplaceId: marketplaceId,
@@ -172,19 +172,19 @@ const getProductCategoriesForSku = api =&gt; ({ marketplaceId, sellerSku }) =&gt
  */
 
 // TODO: we should strip out duplicates! use the Set trick
-const getProductCategoriesForAsins = api =&gt; ({ marketplaceId, asins }) =&gt; {
-    const results = asins.map(asin =&gt; getProductCategoriesForAsin(api)({ marketplaceId, asin }));
+const getProductCategoriesForASINs = api =&gt; ({ marketplaceId, asins }) =&gt; {
+    const results = asins.map(asin =&gt; getProductCategoriesForASIN(api)({ marketplaceId, asin }));
     return Promise.all(results);
 };
 
-const getProductCategoriesForSkus = api =&gt; ({ marketplaceId, skus }) =&gt; {
-    const results = skus.map(sku =&gt; getProductCategoriesForSku(api)({ marketplaceId, sku }));
+const getProductCategoriesForSKUs = api =&gt; ({ marketplaceId, skus }) =&gt; {
+    const results = skus.map(sku =&gt; getProductCategoriesForSKU(api)({ marketplaceId, sku }));
     return Promise.all(results);
 };
 
 module.exports = {
-    getProductCategoriesForAsins,
-    getProductCategoriesForSkus,
+    getProductCategoriesForASINs,
+    getProductCategoriesForSKUs,
 };
 </code></pre>
 

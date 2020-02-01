@@ -231,18 +231,18 @@ describe('API', function runAPITests() {
             });
         });
         describe('getLowestPricedOffers', () => {
-            it('getLowestPricedOffersForSku', function () {
+            it('getLowestPricedOffersForSKU', function () {
                 // console.warn('* test for getLowestPricedOffersForSKU not yet implemented, requires fetching a valid SellerSKU');
                 this.skip();
                 return false;
             });
-            it('getLowestPricedOffersForAsin', async function testGetLowestPricedOffersForASIN() {
+            it('getLowestPricedOffersForASIN', async function testGetLowestPricedOffersForASIN() {
                 const params = {
                     MarketplaceId: 'ATVPDKIKX0DER',
                     ASIN: 'B010YSIKKY',
                     ItemCondition: 'New',
                 };
-                const result = await MWS.getLowestPricedOffersForAsin(params);
+                const result = await MWS.getLowestPricedOffersForASIN(params);
                 expect(result).to.be.an('object').with.keys(
                     'asin',
                     'marketplace',
@@ -270,8 +270,8 @@ describe('API', function runAPITests() {
             });
         });
         describe('getProductCategories*', () => {
-            it('getProductCategoriesForAsins returns single result', async function testCategoriesAsins() {
-                const result = await MWS.getProductCategoriesForAsins({
+            it('getProductCategoriesForASINs returns single result', async function testCategoriesAsins() {
+                const result = await MWS.getProductCategoriesForASINs({
                     marketplaceId: 'ATVPDKIKX0DER',
                     asins: ['B00IDD9TU8'],
                 });
@@ -279,8 +279,8 @@ describe('API', function runAPITests() {
                 expect(result[0]).to.include.all.keys('asin', 'Self');
                 expect(result[0].asin).to.equal('B00IDD9TU8');
             });
-            it('getProductCategoriesForAsins returns multiple results', async function testCategoriesAsins2() {
-                const result = await MWS.getProductCategoriesForAsins({
+            it('getProductCategoriesForASINs returns multiple results', async function testCategoriesAsins2() {
+                const result = await MWS.getProductCategoriesForASINs({
                     marketplaceId: 'ATVPDKIKX0DER',
                     asins: ['B00IDD9TU8', 'B00IH00CN0'],
                 });
@@ -296,7 +296,7 @@ describe('API', function runAPITests() {
             // 1- no category returned, no error
             // 2- error 400, "invalid ASIN for marketplace (x)",
             // 3- error 500, "Server Error"
-            it.skip('getProductCategoriesForSkus', 'unable to test skus without first querying skus');
+            it.skip('getProductCategoriesForSKUs', 'unable to test skus without first querying skus');
         });
         describe('getMyFeesEstimate', () => {
             const test1 = {
