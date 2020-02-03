@@ -8,7 +8,7 @@ const keys = require('../test/keys.json');
 mws.init(keys);
 
 /* eslint-disable no-sequences */
-const getCats = asins => (
+const getCats = (asins) => (
     console.warn('* getting categories for asin count', asins.length),
     mws.getProductCategoriesForASINs({
         marketplaceId: 'ATVPDKIKX0DER',
