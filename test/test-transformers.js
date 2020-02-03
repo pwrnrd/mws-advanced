@@ -12,11 +12,10 @@ describe('transformers', () => {
             expect(forceArray({ obj: 'test' })).to.be.an('Array').with.lengthOf(1);
             return true;
         });
-        it('returns a copy of array passed in', () => {
+        it('simple returns the object if the object is already an array', () => {
             const x = ['test1', 'test2'];
             const y = forceArray(x);
-            expect(y).to.not.equal(x);
-            expect(y).to.deep.equal(x);
+            expect(y).to.equal(y);
             return true;
         });
     });

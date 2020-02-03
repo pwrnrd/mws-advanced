@@ -1,4 +1,3 @@
-const fs = require('fs');
 const MWSAdvanced = require('..');
 const errors = require('../lib/errors');
 const { stubbedXMLResultFile, stubMWSSimple } = require('./mock/mws/utilities');

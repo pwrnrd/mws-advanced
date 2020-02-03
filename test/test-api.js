@@ -249,6 +249,7 @@ describe('API', function runAPITests() {
                     'itemCondition',
                     'summary',
                     'lowestOffers',
+                    'timeOfOfferChange',
                 );
                 const summary = result.summary;
                 expect(summary).to.be.an('object').with.keys(
