@@ -1,7 +1,7 @@
 const MWSAdvanced = require('..');
 const { stubbedXMLResultFile, stubMWSSimple } = require('./mock/mws/utilities');
 
-describe('Finances Parser', () => {
+describe.only('Finances Parser', () => {
     describe('listFinancialEvents()', () => {
         let result;
         before(async function () {
@@ -24,6 +24,11 @@ describe('Finances Parser', () => {
             expect(result.AdjustmentEventList[0].AdjustmentEvent.AdjustmentItemList).to.be.an('array');
             expect(result.DebtRecoveryEventList[0].DebtRecoveryEvent.DebtRecoveryItemList).to.be.an('array');
             expect(result.DebtRecoveryEventList[0].DebtRecoveryEvent.ChargeInstrumentList).to.be.an('array');
+            expect(result.ShipmentEventList[0].ShipmentEvent.ShipmentItemList[0].ShipmentItem.ItemTaxWithheldList).to.be.an('array');
+        });
+
+        it('Transforms lists of which keys that do not end with "List" but which should be lists', () => {
+            expect(result.ShipmentEventList[0].ShipmentEvent.ShipmentItemList[0].ShipmentItem.ItemTaxWithheldList[0].TaxWithheldComponent.TaxesWithheld).to.be.an('array');
         });
     });
 });
