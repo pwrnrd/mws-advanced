@@ -1,7 +1,7 @@
 const MWSAdvanced = require('..');
 const { stubbedXMLResultFile, stubMWSSimple } = require('./mock/mws/utilities');
 
-describe.only('Finances Parser', () => {
+describe('Finances Parser', () => {
     describe('listFinancialEvents()', () => {
         let result;
         before(async function () {
