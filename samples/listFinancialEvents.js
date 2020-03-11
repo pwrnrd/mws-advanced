@@ -7,7 +7,7 @@ async function main() {
     try {
         const startDate = new Date();
         startDate.setDate(startDate.getDate() - 1);
-        const results = await mws.listFinancialEvents({ PostedAfter: startDate });
+        const results = await mws.listFinancialEventsAll({ PostedAfter: startDate });
         console.log(JSON.stringify(results, null, 4));
     } catch (err) {
         console.warn('* error', err);
