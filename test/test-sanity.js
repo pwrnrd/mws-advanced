@@ -97,8 +97,8 @@ describe('mws-advanced sanity', () => {
             done();
         });
         it('init marketplaces', (done) => {
-            let client = MWS.init({ region: 'CN', marketplace: 'CN' });
-            expect(client.host).to.equal('mws.amazonservices.com.cn');
+            let client = MWS.init({ region: 'SG', marketplace: 'SG' });
+            expect(client.host).to.equal('mws-fe.amazonservices.com');
             client = MWS.init({ region: 'AU', marketplace: 'AU' });
             expect(client.host).to.equal('mws.amazonservices.com.au');
             client = MWS.init({ region: 'JP', marketplace: 'JP' });
