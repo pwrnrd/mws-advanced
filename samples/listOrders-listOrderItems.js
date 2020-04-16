@@ -1,6 +1,6 @@
+const fs = require('fs');
 const mws = require('..');
 const keys = require('../test/keys.json');
-const fs = require('fs');
 const { MWS_MARKETPLACES } = require('../lib/constants');
 
 mws.init(keys);
@@ -18,7 +18,7 @@ async function main() {
         // const order = results[0];
         // const orderItems = await mws.listOrderItems(order.AmazonOrderId);
 
-        const getOrderRes = await mws.getOrder({ AmazonOrderId: ['111-6373103-7857033','111-3972635-5621019'] });
+        const getOrderRes = await mws.getOrder({ AmazonOrderId: ['111-6373103-7857033', '111-3972635-5621019'] });
         // console.warn('* orderItems=', JSON.stringify(orderItems));
         console.warn('* getOrderRes=', getOrderRes);
     } catch (err) {
