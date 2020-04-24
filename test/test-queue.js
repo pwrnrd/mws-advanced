@@ -62,6 +62,35 @@ describe('Testing Queues', function () {
             await q.request();
             setImmediate(() => expect(QueueSchedule.getQueue(queueName)).to.be.undefined);
         });
+
+
+        describe.skip('throtteling', () => {
+            beforeEach(() => {
+                const queueName = 'test/test/test';
+                const q = new Queue(
+                    {
+                        api: {
+                            // eslint-disable-next-line prefer-promise-reject-errors
+                            doRequest: () => Promise.reject({
+                                error: {
+                                    code: 503,
+                                    error: new Error('ERROR'),
+                                },
+                            }),
+                            mws: {
+                                ServerError: Error,
+                            },
+                        },
+                    },
+                    () => QueueSchedule.deleteQueue(queueName),
+                );
+                QueueSchedule.registerQueue(q, queueName);
+            });
+
+            it('should throttle a request', () => {
+
+            });
+        });
     });
 
     describe('Class Queue', function () {

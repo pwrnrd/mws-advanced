@@ -6,8 +6,9 @@ mws.init(keys);
 async function main() {
     try {
         const result = await mws.deregisterDestination({
-            marketplaceId: 'ATVPDKIKX0DER',
-            SQSQueueURL: 'https://sqs.eu-west-1.amazonaws.com/465868727235/amazonTest',
+            marketplaceId: 'A2EUQ1WTGCTBG2',
+            SQSQueueURL: 'https://sqs.eu-west-1.amazonaws.com/465868727235/MWSReportSubscription', // 'https://sqs.eu-west-1.amazonaws.com/465868727235/amazonTest',
+
         });
         console.log(result, null, 4);
     } catch (err) {

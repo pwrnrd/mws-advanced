@@ -111,6 +111,16 @@ describe('mws-advanced sanity', () => {
             expect(client.host).to.equal('mws.amazonservices.com');
             client = MWS.init({ region: 'NA', marketplace: 'US' });
             expect(client.host).to.equal('mws.amazonservices.com');
+            client = MWS.init({ region: 'EU', marketplace: 'NL' });
+            expect(client.host).to.equal('mws-eu.amazonservices.com');
+            client = MWS.init({ region: 'EU', marketplace: 'SA' });
+            expect(client.host).to.equal('mws-eu.amazonservices.com');
+            client = MWS.init({ region: 'EU', marketplace: 'TR' });
+            expect(client.host).to.equal('mws-eu.amazonservices.com');
+            client = MWS.init({ region: 'EU', marketplace: 'IN' });
+            expect(client.host).to.equal('mws-eu.amazonservices.com');
+            client = MWS.init({ region: 'EU', marketplace: 'AE' });
+            expect(client.host).to.equal('mws-eu.amazonservices.com');
             done();
         });
         it('init w/ junk marketplace uses default host', (done) => {
@@ -165,7 +175,6 @@ describe('mws-advanced sanity', () => {
 
             try {
                 const x = await test2.callEndpoint(testCall, testParams);
-                // this SHOULD be an assert, but i don't think we have assert loaded here.
                 return expect(x).to.equal(undefined);
             } catch (err) {
                 // expect(err).to.be.an.instanceOf(test2.mws.ServerError);

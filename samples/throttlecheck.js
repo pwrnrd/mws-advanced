@@ -5,12 +5,14 @@
 const mws = require('..');
 const keys = require('../test/keys.json');
 
-mws.init(keys);
+// mws.init(keys);
+const mwsInstance = new mws(keys);
+
 
 /* eslint-disable no-sequences */
 const getCats = (asins) => (
     console.warn('* getting categories for asin count', asins.length),
-    mws.getProductCategoriesForASINs({
+    mwsInstance.getProductCategoriesForASINs({
         marketplaceId: 'ATVPDKIKX0DER',
         asins,
     })
@@ -55,10 +57,11 @@ async function main() {
 // }
 
 /* eslint-disable */
-let x = 1;
+let x = 10;
 while (x-- > 0) {
     main().then(res => {
-        console.warn('* res length=', res.length);
+			console.log('res', res);
+        console.warn('* jeej ik heb mijn request hier =', res.length);
     }).catch(err => {
         console.warn('* error completing?!', err);
     });
